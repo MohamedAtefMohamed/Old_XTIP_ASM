@@ -113,7 +113,6 @@ route_by_technology() {
         # jq filter: check if any technology matches the pattern (case-insensitive)
         local matched
         matched=$(jq -r --arg pat "$pattern" '
-            .[] |
             select(
                 (.technologies // []) |
                 map(ascii_downcase) |

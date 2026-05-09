@@ -60,6 +60,10 @@ run_nuclei_generic() {
             local name; name=$(echo "$rec" | jq -r '.info.name // $tid'               2>/dev/null --argjson tid "\"$tid\"")
             emit_finding "$mat" "nuclei" "$sev" "$name" "$mat" "$tid"
         done
+        for s in info low medium high critical; do
+            jq -c "select(.info.severity == \"$s\")" "$out_json" > "${WORKSPACE}/results/nuclei_output/generic_${s}.json" 2>/dev/null || true
+            [[ ! -s "${WORKSPACE}/results/nuclei_output/generic_${s}.json" ]] && rm -f "${WORKSPACE}/results/nuclei_output/generic_${s}.json"
+        done
     fi
 
     end_func "$(count_lines "$out_txt") nuclei findings → ${out_txt}" "$fn"
@@ -141,6 +145,10 @@ run_nuclei_dast() {
             local tid; tid=$(echo "$rec" | jq -r '.["template-id"] // "unknown"' 2>/dev/null)
             local mat; mat=$(echo "$rec" | jq -r '."matched-at" // .host // empty' 2>/dev/null)
             emit_finding "$mat" "nuclei-dast" "$sev" "$tid" "$mat" "$tid"
+        done
+        for s in info low medium high critical; do
+            jq -c "select(.info.severity == \"$s\")" "$out_json" > "${WORKSPACE}/results/nuclei_output/dast_${s}.json" 2>/dev/null || true
+            [[ ! -s "${WORKSPACE}/results/nuclei_output/dast_${s}.json" ]] && rm -f "${WORKSPACE}/results/nuclei_output/dast_${s}.json"
         done
     fi
 

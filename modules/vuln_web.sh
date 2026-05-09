@@ -126,9 +126,10 @@ run_webcache_check() {
     start_func "$fn" "Web Cache Poisoning"
     local out="${RAW}/webcache.txt"
     Web-Cache-Vulnerability-Scanner -u "file:$(_web_targets)" -v 0 2>/dev/null \
-        | grep -iE 'vulnerable|HIT|poisoned' >> "$out" || true
+        | grep -iE 'vulnerable|poisoned' >> "$out" || true
     while IFS= read -r line; do
-        emit_finding "$(echo "$line" | awk '{print $1}')" "wcvs" "high" "Web Cache Poisoning" "$(echo "$line" | awk '{print $1}')" "$line"
+        local url; url=$(echo "$line" | grep -oE 'https?://[^ ]+' | head -1)
+        emit_finding "${url:-unknown}" "wcvs" "high" "Web Cache Poisoning" "${url:-unknown}" "$line"
     done < "$out"
     end_func "$(count_lines "$out") findings → ${out}" "$fn"
 }
