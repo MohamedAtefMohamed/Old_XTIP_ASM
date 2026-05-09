@@ -47,10 +47,12 @@ prepare_targets() {
         python3 -c '
 import sys, re
 with open(sys.argv[1], "r", encoding="utf-8") as f: c = f.read()
-with open(sys.argv[2], "w", encoding="utf-8") as f: f.write(re.sub(r",\s*([\]}])", r"\1", c))
+c = re.sub(r",\s*([\]}])", r"\1", c)
+c = c.replace(r"\\\"", r"\"")
+with open(sys.argv[2], "w", encoding="utf-8") as f: f.write(c)
 ' "$ASSET_JSON" "$safe_json" 2>/dev/null || cp "$ASSET_JSON" "$safe_json"
     elif command -v perl >/dev/null 2>&1; then
-        perl -0777 -pe "s/,\s*([}\]])/\$1/g" "$ASSET_JSON" > "$safe_json" 2>/dev/null || cp "$ASSET_JSON" "$safe_json"
+        perl -0777 -pe "s/,\s*([}\]])/\$1/g; s/\\\\\"/\\\"/g" "$ASSET_JSON" > "$safe_json" 2>/dev/null || cp "$ASSET_JSON" "$safe_json"
     else
         cp "$ASSET_JSON" "$safe_json"
     fi
