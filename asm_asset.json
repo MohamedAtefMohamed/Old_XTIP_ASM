@@ -36,9 +36,7 @@
     "reverseIpHosts": "{97.6f.ef96.ip4.static.sl-reverse.com}",
     "cloudAssets": null,
     "asnCidr": "{150.238.0.0/16,150.239.0.0/17,150.239.128.0/19,150.239.160.0/21,150.239.168.0/24,150.239.169.0/26,150.239.169.64/28,150.239.169.80/29,150.239.169.88/30}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "c084371a-92bb-49de-a00b-8806d0063f92",
     "subdomain": "sut.edu.eg",
@@ -156,9 +154,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{216.198.79.0/24,64.29.17.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "a61465f7-80df-4126-95bc-100867833b12",
     "subdomain": "hrisprojectbeta.sut.edu.eg",
@@ -196,9 +192,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{188.114.96.0/22,188.114.100.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "96a60ecb-9e23-4515-a8df-85ec34f40cc6",
     "subdomain": "qms.sut.edu.eg",
@@ -236,9 +230,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{172.67.64.0/18,172.67.128.0/17,172.68.0.0/24,104.21.0.0/17,2606:4700:2ffe::/47,2606:4700:3000::/42}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "4fbea0b1-92c5-4a3f-b03b-40d4e924fd5c",
     "subdomain": "heycrm.sut.edu.eg",
@@ -276,9 +268,7 @@
     "reverseIpHosts": "{a33a763eea48e22da.awsglobalaccelerator.com,a92e093842311e90d.awsglobalaccelerator.com}",
     "cloudAssets": null,
     "asnCidr": "{99.83.124.0/22,99.83.128.0/17,99.84.0.0/23,99.84.2.0/24,35.71.117.0/24,35.71.118.0/23,35.71.120.0/21,35.71.128.0/17,35.72.0.0/13,35.80.0.0/12,35.96.0.0/22,35.96.4.0/24,75.2.61.0/24,75.2.62.0/23,75.2.64.0/18,75.2.128.0/18,13.248.82.0/23,13.248.84.0/22,13.248.88.0/21,13.248.96.0/19,13.248.128.0/17,13.249.0.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "db77b94d-55bc-4516-beac-140598a1135e",
     "subdomain": "webinars.sut.edu.eg",
@@ -356,9 +346,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "e8ca7f01-87bf-4fcf-a8da-7f25d80cbcab",
     "subdomain": "forms.sut.edu.eg",
@@ -396,9 +384,7 @@
     "reverseIpHosts": "{ec2-15-188-254-69.eu-west-3.compute.amazonaws.com}",
     "cloudAssets": null,
     "asnCidr": "{15.181.255.0/24,15.182.0.0/15,15.184.0.0/14,15.188.0.0/16}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "b9e43f75-56c2-4c42-8721-19d0fbd8058c",
     "subdomain": "services.sut.edu.eg",
@@ -436,9 +422,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{216.198.79.0/24,64.29.17.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "c042c984-0518-4c75-a71d-5d3b85edf9a7",
     "subdomain": "lms.sut.edu.eg",
@@ -476,9 +460,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "8c6ed368-b048-4c6e-bc65-51c871e80440",
     "subdomain": "qmsservice.sut.edu.eg",
@@ -516,9 +498,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{104.21.0.0/17,172.67.64.0/18,172.67.128.0/17,172.68.0.0/24,2606:4700:2ffe::/47,2606:4700:3000::/42}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "1866cfd2-d20c-43c6-b186-55289f7f3484",
     "subdomain": "gamesbooking.sut.edu.eg",
@@ -556,9 +536,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "1c2b8d0c-0733-4801-a460-37a07fe96df3",
     "subdomain": "opencourses.sut.edu.eg",
@@ -596,9 +574,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "5b2429ae-6812-4489-afff-6a358339958b",
     "subdomain": "sut.blob.core.windows.net",
@@ -636,9 +612,7 @@
     "reverseIpHosts": null,
     "cloudAssets": "[{\"url\": \"http://sut.blob.core.windows.net/\", \"access\": \"public\", \"service\": \"HTTPS-Only Account\", \"provider\": \"azure\", \"discoveredAt\": \"2026-05-09T10:50:29.342Z\"}]",
     "asnCidr": "{20.47.128.0/17,20.48.0.0/12,20.64.0.0/13,20.72.0.0/15,20.74.0.0/16}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "1dd82a87-9d91-49cc-a8d5-5d14bc8715cc",
     "subdomain": "notify.pthr.sut.edu.eg",
@@ -676,9 +650,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "e7984abe-c7bd-4ca5-ae85-c19b4c154e62",
     "subdomain": "service.qms.sut.edu.eg",
@@ -716,9 +688,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "7df6e836-50ef-49c2-889b-542a100bfd81",
     "subdomain": "sut.queue.core.windows.net",
@@ -756,9 +726,7 @@
     "reverseIpHosts": null,
     "cloudAssets": "[{\"url\": \"http://sut.queue.core.windows.net/\", \"access\": \"public\", \"service\": \"HTTPS-Only Account\", \"provider\": \"azure\", \"discoveredAt\": \"2026-05-09T10:50:29.485Z\"}]",
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "ae79f862-9472-4fcd-a641-f3ba1caa0814",
     "subdomain": "sut.scm.azurewebsites.net",
@@ -796,9 +764,7 @@
     "reverseIpHosts": null,
     "cloudAssets": "[{\"url\": \"https://sut.scm.azurewebsites.net/\", \"access\": \"public\", \"service\": \"Unathorized Account\", \"provider\": \"azure\", \"discoveredAt\": \"2026-05-09T10:50:29.723Z\"}]",
     "asnCidr": null,
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "6bee6f6d-a561-4f51-b870-35adf3628bb2",
     "subdomain": "board.sut.edu.eg",
@@ -836,9 +802,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{188.114.96.0/22,188.114.100.0/24,2606:4700:2ffe::/47,2606:4700:3000::/42}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "94837671-0755-417a-951a-40bd4bac9b80",
     "subdomain": "reg-api.sut.edu.eg",
@@ -876,9 +840,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{212.227.200.0/21}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "c0946f27-04d1-4ef2-9b01-73152ea16a95",
     "subdomain": "sis.sut.edu.eg",
@@ -916,9 +878,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{172.67.64.0/18,172.67.128.0/17,172.68.0.0/24,104.21.0.0/17,2606:4700:2ffe::/47,2606:4700:3000::/42}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "a6e9c2af-e009-4f29-840e-f5a2b7afaa46",
     "subdomain": "staffsis.sut.edu.eg",
@@ -956,9 +916,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{212.227.200.0/21}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "a8c917f4-a6fb-4e04-bff0-20840d80dafa",
     "subdomain": "paytabs.sut.edu.eg",
@@ -996,9 +954,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{212.227.200.0/21}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "0868765c-bfbb-4eb0-8dd9-32e2c769d2d5",
     "subdomain": "hris.sut.edu.eg",
@@ -1036,9 +992,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{188.114.96.0/22,188.114.100.0/24,2606:4700:2ffe::/47,2606:4700:3000::/42}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "7d28602c-6a7b-4ba3-b06b-1baf9cd06e1f",
     "subdomain": "sut.table.core.windows.net",
@@ -1076,9 +1030,7 @@
     "reverseIpHosts": null,
     "cloudAssets": "[{\"url\": \"http://sut.table.core.windows.net/\", \"access\": \"public\", \"service\": \"HTTPS-Only Account\", \"provider\": \"azure\", \"discoveredAt\": \"2026-05-09T10:50:29.543Z\"}]",
     "asnCidr": "{20.47.128.0/17,20.48.0.0/12,20.64.0.0/13,20.72.0.0/15,20.74.0.0/16}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "2c0d5e16-6b67-4981-8580-1f6739abd4d0",
     "subdomain": "www.sut.edu.eg",
@@ -1116,9 +1068,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{141.193.213.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "9138eb18-7d6b-49fb-9a01-58b815c7afe8",
     "subdomain": "hseaiswd.sut.edu.eg",
@@ -1156,9 +1106,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{64.29.17.0/24,216.198.79.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "de8ff20f-5fa5-489c-802d-eb1d07883278",
     "subdomain": "exams.sut.edu.eg",
@@ -1196,9 +1144,7 @@
     "reverseIpHosts": "{vmi2758373.contaboserver.net}",
     "cloudAssets": null,
     "asnCidr": "{178.18.240.0/20}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "15cdef61-97ca-428b-b722-a4c2117d6c71",
     "subdomain": "learnms.sut.edu.eg",
@@ -1236,9 +1182,7 @@
     "reverseIpHosts": "{vmi1460587.contaboserver.net}",
     "cloudAssets": null,
     "asnCidr": "{207.244.224.0/19}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "df050a68-e9e0-40d3-bc5c-15396cb6285a",
     "subdomain": "sut.s3.amazonaws.com",
@@ -1276,9 +1220,7 @@
     "reverseIpHosts": "{s3-1-w.amazonaws.com}",
     "cloudAssets": "[{\"url\": \"http://sut.s3.amazonaws.com/\", \"access\": \"protected\", \"service\": \"Protected S3 Bucket\", \"provider\": \"aws\", \"discoveredAt\": \"2026-05-09T10:50:29.259Z\"}]",
     "asnCidr": "{52.208.0.0/13,52.216.0.0/15,52.218.0.0/18,16.15.156.0/22,16.15.160.0/19,16.15.192.0/18,3.5.0.0/19,54.231.89.0/24,54.231.90.0/23,54.231.92.0/22,54.231.96.0/19,54.231.128.0/17,54.232.0.0/15}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "f069d84e-4b74-44d7-ae5b-bfc6941b8788",
     "subdomain": "ariif2026.sut.edu.eg",
@@ -1316,9 +1258,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{216.198.79.0/24,64.29.17.0/24}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "7dd42de3-10e6-446e-9cf2-9c7a09c6b8a3",
     "subdomain": "pthr.sut.edu.eg",
@@ -1356,9 +1296,7 @@
     "reverseIpHosts": null,
     "cloudAssets": null,
     "asnCidr": "{188.114.96.0/22,188.114.100.0/24,2606:4700:2ffe::/47,2606:4700:3000::/42}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "62f232d5-2377-4304-a948-dea7594a480f",
     "subdomain": "storage.googleapis.com",
@@ -1396,9 +1334,7 @@
     "reverseIpHosts": "{pnmila-ag-in-f27.1e100.net,dia02s03-in-f27.1e100.net,ncmrsa-ag-in-x1b.1e100.net,mct01s20-in-f27.1e100.net,pnmila-ak-in-f27.1e100.net,tzmila-af-in-f27.1e100.net,ncmrsa-ah-in-x1b.1e100.net,tzmila-ae-in-f27.1e100.net,mil04s51-in-f27.1e100.net,ncmrsb-ao-in-x1b.1e100.net,pnmila-aj-in-f27.1e100.net,fra15s22-in-f187.1e100.net,fra15s22-in-f27.1e100.net}",
     "cloudAssets": "[{\"url\": \"http://storage.googleapis.com/sut\", \"access\": \"protected\", \"service\": \"Protected Google Bucket\", \"provider\": \"gcp\", \"discoveredAt\": \"2026-05-09T10:50:30.034Z\"}]",
     "asnCidr": "{142.251.192.0/20,142.251.208.0/22,172.217.0.0/19,142.251.133.0/24,142.251.134.0/23,142.251.136.0/21,142.251.144.0/20,142.251.160.0/19,172.217.160.0/21,172.217.168.0/22,142.250.177.0/24,142.250.178.0/23,142.250.180.0/22,142.250.184.0/23,142.250.186.0/24,2a00:1450::/34,2a00:1450:4000::/43,2a00:1450:4020::/46,2a00:1450:4024::/47}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "45b440b9-9401-4668-ad01-90330163a2ca",
     "subdomain": "medi2025.sut.edu.eg",
@@ -1475,9 +1411,7 @@
     "reverseIpHosts": null,
     "cloudAssets": "[{\"url\": \"sut.azurewebsites.net\", \"access\": \"public\", \"service\": \"Registered Azure Website DNS Name\", \"provider\": \"azure\", \"discoveredAt\": \"2026-05-09T10:50:29.893Z\"}]",
     "asnCidr": "{20.75.0.0/16,20.76.0.0/14,20.80.0.0/12,20.96.0.0/11}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  },
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"},
   {
     "id": "cbdca70a-9e8e-427c-8372-d8307d08742c",
     "subdomain": "sut.file.core.windows.net",
@@ -1515,7 +1449,5 @@
     "reverseIpHosts": null,
     "cloudAssets": "[{\"url\": \"http://sut.file.core.windows.net/\", \"access\": \"public\", \"service\": \"HTTPS-Only Account\", \"provider\": \"azure\", \"discoveredAt\": \"2026-05-09T10:50:29.418Z\"}]",
     "asnCidr": "{20.47.128.0/17,20.48.0.0/12,20.64.0.0/13,20.72.0.0/15,20.74.0.0/16}",
-    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8",
-     
-  }
+    "orgId": "b6851f4e-bc69-44f9-9a3e-c67637d365c8"}
 ]

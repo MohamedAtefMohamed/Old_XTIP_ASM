@@ -127,7 +127,7 @@ dedupe_append() {
 count_lines() {
     local file="$1"
     if [[ -f "$file" ]]; then
-        grep -c "" "$file" 2>/dev/null || echo 0
+        wc -l < "$file" 2>/dev/null | tr -d ' \t' || echo 0
     else
         echo 0
     fi
