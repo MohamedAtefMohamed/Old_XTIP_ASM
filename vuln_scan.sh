@@ -28,7 +28,7 @@
 #    Phase 8: Reporting
 # =============================================================================
 
-set -euo pipefail
+set -uo pipefail
 
 # ---------------------------------------------------------------------------
 # Self-location
@@ -142,29 +142,25 @@ source "${SCRIPT_DIR}/modules/vuln_tech.sh"
 # ---------------------------------------------------------------------------
 if [[ "$CHECK_TOOLS_ONLY" == "true" ]]; then
     log_info "=== Tool Dependency Check ==="
-    declare -a REQUIRED_TOOLS=(jq httpx nuclei katana waybackurls gf dalfox ffuf)
-    declare -a OPTIONAL_TOOLS=(
-        testssl.sh crlfuzz sqlmap commix brutespray wpscan trufflehog
-        qsreplace anew interactsh-client Gxss urless ppfuzz TInjA sstimap
-        nomore403 smugglex Web-Cache-Vulnerability-Scanner
-    )
-    local_ok=true
-    for t in "${REQUIRED_TOOLS[@]}"; do
+    _all_required_ok=true
+    for t in jq httpx nuclei katana waybackurls gf dalfox ffuf; do
         if command -v "$t" >/dev/null 2>&1; then
             log_ok  "  [REQUIRED] $t ✔"
         else
             log_fail "  [REQUIRED] $t ✘ — MISSING"
-            local_ok=false
+            _all_required_ok=false
         fi
     done
-    for t in "${OPTIONAL_TOOLS[@]}"; do
+    for t in testssl.sh crlfuzz sqlmap commix brutespray wpscan trufflehog \
+             qsreplace anew interactsh-client Gxss urless ppfuzz TInjA sstimap \
+             nomore403 smugglex Web-Cache-Vulnerability-Scanner; do
         if command -v "$t" >/dev/null 2>&1; then
             log_ok   "  [OPTIONAL] $t ✔"
         else
             log_warn "  [OPTIONAL] $t ✘ (missing — related module will skip)"
         fi
     done
-    [[ "$local_ok" == "true" ]] && exit 0 || exit 1
+    [[ "$_all_required_ok" == "true" ]] && exit 0 || exit 1
 fi
 
 # ---------------------------------------------------------------------------

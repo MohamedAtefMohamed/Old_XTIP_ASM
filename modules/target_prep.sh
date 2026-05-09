@@ -42,74 +42,78 @@ prepare_targets() {
     # -------------------------------------------------------------------------
     # 1. All subdomains
     # -------------------------------------------------------------------------
-    jq -r '.[].subdomain // empty' "$ASSET_JSON" 2>/dev/null \
+    { jq -r '.[].subdomain // empty' "$ASSET_JSON" 2>/dev/null || true; } \
         | sort -u > "${tdir}/all_subdomains.txt"
     log_info "  → all_subdomains.txt: $(count_lines "${tdir}/all_subdomains.txt") entries"
 
     # -------------------------------------------------------------------------
     # 2. DNS-alive subdomains  (isAlive == true)
     # -------------------------------------------------------------------------
-    jq -r '.[] | select(.isAlive == true) | .subdomain // empty' "$ASSET_JSON" 2>/dev/null \
+    { jq -r '.[] | select(.isAlive == true) | .subdomain // empty' "$ASSET_JSON" 2>/dev/null || true; } \
         | sort -u > "${tdir}/alive_subdomains.txt"
     log_info "  → alive_subdomains.txt: $(count_lines "${tdir}/alive_subdomains.txt") entries"
 
     # -------------------------------------------------------------------------
     # 3. HTTP-alive base URLs  (isHttpAlive == true, httpMetadata.url present)
     # -------------------------------------------------------------------------
-    jq -r '
-        .[] |
-        select(.isHttpAlive == true) |
-        select(.httpMetadata != null) |
-        (.httpMetadata | fromjson? // {}) |
-        .url // empty
-    ' "$ASSET_JSON" 2>/dev/null \
-        | grep -E '^https?://' \
-        | sed 's#/*$##' \
-        | sort -u > "${tdir}/web_targets.txt"
+    {
+        jq -r '
+            .[] |
+            select(.isHttpAlive == true) |
+            select(.httpMetadata != null) |
+            (.httpMetadata | fromjson? // {}) |
+            .url // empty
+        ' "$ASSET_JSON" 2>/dev/null || true
+    } | grep -E '^https?://' \
+      | sed 's#/*$##' \
+      | sort -u > "${tdir}/web_targets.txt" || true
     log_info "  → web_targets.txt: $(count_lines "${tdir}/web_targets.txt") URLs"
 
     # -------------------------------------------------------------------------
     # 4. Resolved IPs  (flatten resolvedIps JSON arrays)
     # -------------------------------------------------------------------------
-    jq -r '
-        .[] |
-        select(.resolvedIps != null and .resolvedIps != "[]") |
-        (.resolvedIps | fromjson? // []) |
-        .[]
-    ' "$ASSET_JSON" 2>/dev/null \
-        | grep -E '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$' \
-        | grep -vE '^(127\.|10\.|169\.254\.|172\.(1[6-9]|2[0-9]|3[01])\.|192\.168\.)' \
-        | sort -u > "${tdir}/ips.txt"
+    {
+        jq -r '
+            .[] |
+            select(.resolvedIps != null and .resolvedIps != "[]") |
+            (.resolvedIps | fromjson? // []) |
+            .[]
+        ' "$ASSET_JSON" 2>/dev/null || true
+    } | grep -E '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$' \
+      | grep -vE '^(127\.|10\.|169\.254\.|172\.(1[6-9]|2[0-9]|3[01])\.|192\.168\.)' \
+      | sort -u > "${tdir}/ips.txt" || true
     log_info "  → ips.txt: $(count_lines "${tdir}/ips.txt") unique IPs"
 
     # -------------------------------------------------------------------------
     # 5. HTTPS hosts  (port 443 open)
     # -------------------------------------------------------------------------
-    jq -r '
-        .[] |
-        select(.portMetadata != null) |
-        . as $asset |
-        (.portMetadata | fromjson? // {}) |
-        to_entries[] |
-        select(.key == "443" and .value.state == "open") |
-        $asset.subdomain
-    ' "$ASSET_JSON" 2>/dev/null \
-        | sort -u > "${tdir}/https_hosts.txt"
+    {
+        jq -r '
+            .[] |
+            select(.portMetadata != null) |
+            . as $asset |
+            (.portMetadata | fromjson? // {}) |
+            to_entries[] |
+            select(.key == "443" and .value.state == "open") |
+            $asset.subdomain
+        ' "$ASSET_JSON" 2>/dev/null || true
+    } | sort -u > "${tdir}/https_hosts.txt" || true
     log_info "  → https_hosts.txt: $(count_lines "${tdir}/https_hosts.txt") hosts"
 
     # -------------------------------------------------------------------------
     # 6. SSH hosts  (port 22 open)
     # -------------------------------------------------------------------------
-    jq -r '
-        .[] |
-        select(.portMetadata != null) |
-        . as $asset |
-        (.portMetadata | fromjson? // {}) |
-        to_entries[] |
-        select(.key == "22" and .value.state == "open") |
-        $asset.subdomain
-    ' "$ASSET_JSON" 2>/dev/null \
-        | sort -u > "${tdir}/ssh_hosts.txt"
+    {
+        jq -r '
+            .[] |
+            select(.portMetadata != null) |
+            . as $asset |
+            (.portMetadata | fromjson? // {}) |
+            to_entries[] |
+            select(.key == "22" and .value.state == "open") |
+            $asset.subdomain
+        ' "$ASSET_JSON" 2>/dev/null || true
+    } | sort -u > "${tdir}/ssh_hosts.txt" || true
     log_info "  → ssh_hosts.txt: $(count_lines "${tdir}/ssh_hosts.txt") hosts"
 
     # -------------------------------------------------------------------------
@@ -125,23 +129,24 @@ prepare_targets() {
                     map(select(.value.state == "open") |
                         {port: .key, service: .value.service, protocol: .value.protocol}))
         }
-    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/port_map.json"
+    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/port_map.json" || true
     log_info "  → port_map.json: $(count_lines "${tdir}/port_map.json") entries"
 
     # -------------------------------------------------------------------------
     # 8. Non-web open ports (not 80/443)
     # -------------------------------------------------------------------------
-    jq -r '
-        .[] |
-        select(.portMetadata != null) |
-        . as $asset |
-        (.portMetadata | fromjson? // {}) |
-        to_entries[] |
-        select(.value.state == "open") |
-        select(.key != "80" and .key != "443") |
-        "\($asset.subdomain):\(.key) [\(.value.service)]"
-    ' "$ASSET_JSON" 2>/dev/null \
-        | sort -u > "${tdir}/non_http_ports.txt"
+    {
+        jq -r '
+            .[] |
+            select(.portMetadata != null) |
+            . as $asset |
+            (.portMetadata | fromjson? // {}) |
+            to_entries[] |
+            select(.value.state == "open") |
+            select(.key != "80" and .key != "443") |
+            "\($asset.subdomain):\(.key) [\(.value.service)]"
+        ' "$ASSET_JSON" 2>/dev/null || true
+    } | sort -u > "${tdir}/non_http_ports.txt" || true
     log_info "  → non_http_ports.txt: $(count_lines "${tdir}/non_http_ports.txt") entries"
 
     # -------------------------------------------------------------------------
@@ -160,7 +165,7 @@ prepare_targets() {
             webServer: ($hm.webServer // null),
             statusCode: ($hm.statusCode // null)
         }
-    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/tech_map.json"
+    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/tech_map.json" || true
     log_info "  → tech_map.json: $(count_lines "${tdir}/tech_map.json") entries"
 
     # -------------------------------------------------------------------------
@@ -172,7 +177,7 @@ prepare_targets() {
         . as $asset |
         (.tlsMetadata | fromjson? // {}) as $tls |
         "\($asset.subdomain) | issuer=\($tls.issuer // "?") version=\($tls.version // "?") expiry=\($tls.notAfter // "?") days_left=\($tls.daysUntilExpiry // "?") expired=\($tls.isExpired // false)"
-    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/tls_info.txt"
+    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/tls_info.txt" || true
     log_info "  → tls_info.txt: $(count_lines "${tdir}/tls_info.txt") TLS entries"
 
     # -------------------------------------------------------------------------
@@ -188,20 +193,21 @@ prepare_targets() {
             (($tls.daysUntilExpiry // 9999) <= 30)
         ) |
         "\($asset.subdomain) | days_left=\($tls.daysUntilExpiry // "EXPIRED") expired=\($tls.isExpired)"
-    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/expiring_certs.txt"
+    ' "$ASSET_JSON" 2>/dev/null > "${tdir}/expiring_certs.txt" || true
     log_info "  → expiring_certs.txt: $(count_lines "${tdir}/expiring_certs.txt") entries"
 
     # -------------------------------------------------------------------------
     # 12. Cloud assets
     # -------------------------------------------------------------------------
-    jq -r '
-        .[] |
-        select(.cloudAssets != null) |
-        (.cloudAssets | fromjson? // []) |
-        .[] |
-        "\(.provider) | \(.service) | \(.access) | \(.url)"
-    ' "$ASSET_JSON" 2>/dev/null \
-        | sort -u > "${tdir}/cloud_assets.txt"
+    {
+        jq -r '
+            .[] |
+            select(.cloudAssets != null) |
+            (.cloudAssets | fromjson? // []) |
+            .[] |
+            "\(.provider) | \(.service) | \(.access) | \(.url)"
+        ' "$ASSET_JSON" 2>/dev/null || true
+    } | sort -u > "${tdir}/cloud_assets.txt" || true
     log_info "  → cloud_assets.txt: $(count_lines "${tdir}/cloud_assets.txt") cloud assets"
 
     # -------------------------------------------------------------------------

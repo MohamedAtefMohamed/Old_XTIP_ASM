@@ -126,15 +126,15 @@ dedupe_append() {
 # Count non-empty lines in a file
 count_lines() {
     local file="$1"
-    if [[ -s "$file" ]]; then
-        grep -c . "$file" 2>/dev/null || echo 0
+    if [[ -f "$file" ]]; then
+        grep -c "" "$file" 2>/dev/null || echo 0
     else
         echo 0
     fi
 }
 
 # Safe, non-empty line count from stdin
-count_stdin() { grep -c . 2>/dev/null || echo 0; }
+count_stdin() { wc -l 2>/dev/null | tr -d ' \t' || echo 0; }
 
 # ---------------------------------------------------------------------------
 # TOOL EXECUTION
